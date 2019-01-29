@@ -1,0 +1,55 @@
+<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+  <li class="nav-item">
+    <a
+      class="nav-link active"
+      id="pills-actors-tab"
+      data-toggle="pill"
+      href="#pills-actors"
+      role="tab"
+      aria-controls="pills-actors"
+      aria-selected="true">Actors</a>
+  </li>
+  <li class="nav-item">
+    <a
+      class="nav-link"
+      id="pills-movies-tab"
+      data-toggle="pill"
+      href="#pills-movies"
+      role="tab"
+      aria-controls="pills-movies"
+      aria-selected="false">Movies</a>
+  </li>
+  <li class="nav-item">
+    <a
+      class="nav-link"
+      id="pills-categories-tab"
+      data-toggle="pill"
+      href="#pills-categories"
+      role="tab"
+      aria-controls="pills-categories"
+      aria-selected="false">Categories</a>
+  </li>
+</ul>
+<div class="tab-content" id="pills-tabContent">
+  <div
+    class="tab-pane fade show active"
+    id="pills-actors"
+    role="tabpanel"
+    aria-labelledby="pills-actors-tab">
+    <app-actors-list [mode]="'delete'"></app-actors-list>
+  </div>
+  <div
+    class="tab-pane fade"
+    id="pills-movies"
+    role="tabpanel"
+    aria-labelledby="pills-movies-tab">
+    <app-movies-list [mode]="'delete'"></app-movies-list>
+  </div>
+  <div
+    class="tab-pane fade"
+    id="pills-categories"
+    role="tabpanel"
+    aria-labelledby="pills-categories-tab">
+    <app-categories-list [mode]="'delete'"></app-categories-list>
+  </div>
+</div>
