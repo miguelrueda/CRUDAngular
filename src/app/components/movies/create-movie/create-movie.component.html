@@ -5,7 +5,9 @@
   </div>
   <div class="form-group">
     <label for="inputNationality">Country</label>
-    <input type="text" class="form-control" id="inputNationality" placeholder="Country">
+    <select class="form-control" id="inputNationality">
+      <option *ngFor="let item of countries.getCountries()">{{item.name}}</option>
+    </select>
   </div>
   <div class="form-group">
     <label for="inputYear">Year</label>

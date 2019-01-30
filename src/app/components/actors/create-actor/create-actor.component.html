@@ -5,7 +5,9 @@
   </div>
   <div class="form-group">
     <label for="inputNationality">Nationality</label>
-    <input type="text" class="form-control" id="inputNationality" placeholder="Nationality">
+    <select class="form-control" id="inputNationality">
+      <option *ngFor="let item of countries.getCountries()">{{item.name}}</option>
+    </select>
   </div>
   <div class="form-group">
     <label for="inputBornDate">Born Date</label>
@@ -13,7 +15,10 @@
   </div>
   <div class="form-group">
     <label for="inputGenre">Genre</label>
-    <input type="text" class="form-control" id="inputGenre" placeholder="Genre">
+    <select class="form-control" id="inputGenre">
+      <option>Male</option>
+      <option>Female</option>
+    </select>
   </div>
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>

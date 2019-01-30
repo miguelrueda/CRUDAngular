@@ -13,7 +13,7 @@ export class CategoriesListComponent implements OnInit {
   private categoriesList: Object[];
 
   constructor(private categories: CategoriesService,
-    private route: Router, private activatedRoute: ActivatedRoute) { }
+    private router: Router, private activatedRoute: ActivatedRoute) { }
 
   ngOnInit() {
     this.categoriesList = this.categories.getCategories();
@@ -21,6 +21,12 @@ export class CategoriesListComponent implements OnInit {
 
   public edit(id: number): void {
     console.log(`Editar ${id}`);
+    this.router.navigate(['/create'], {
+      relativeTo: this.activatedRoute,
+      queryParams: {
+        categoryId: id
+      }
+    });
   }
 
   public delete(id: number): void {

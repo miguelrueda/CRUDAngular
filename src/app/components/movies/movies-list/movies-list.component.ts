@@ -21,6 +21,12 @@ export class MoviesListComponent implements OnInit {
 
   public edit(id: number): void {
     console.log(`Editar ${id}`);
+    this.router.navigate(['/create'], {
+      relativeTo: this.activatedRoute,
+      queryParams: {
+        movieId: id
+      }
+    });
   }
 
   public delete(id: number): void {

@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Actor } from 'src/app/interfaces/actor';
+import { ActorsService } from 'src/app/services/actors.service';
+import { CountriesService } from 'src/app/services/countries.service';
 
 @Component({
   selector: 'app-create-actor',
@@ -7,9 +10,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CreateActorComponent implements OnInit {
 
-  constructor() { }
+  @Input() actorId: number;
+  private currentActor: Actor;
+  actorName = '';
+
+  constructor(private actors: ActorsService, private countries: CountriesService) { }
 
   ngOnInit() {
+    if (this.actorId && this.actorId !== -1) {
+      this.currentActor = this.actors.getActorById(this.actorId);
+      this.actorName = this.currentActor.name;
+    } else {
+      console.log('undefined id');
+    }
   }
 
 }

@@ -16,6 +16,10 @@ import { CreateCategoryComponent } from './components/categories/create-category
 import { ActorsListComponent } from './components/actors/actors-list/actors-list.component';
 import { MoviesListComponent } from './components/movies/movies-list/movies-list.component';
 import { CategoriesListComponent } from './components/categories/categories-list/categories-list.component';
+import { ActorsService } from './services/actors.service';
+import { MoviesService } from './services/movies.service';
+import { CategoriesService } from './services/categories.service';
+import { CountriesService } from './services/countries.service';
 
 @NgModule({
   declarations: [
@@ -39,7 +43,12 @@ import { CategoriesListComponent } from './components/categories/categories-list
     AppRoutingModule,
     FormsModule
   ],
-  providers: [],
+  providers: [
+    ActorsService,
+    MoviesService,
+    CategoriesService,
+    CountriesService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CountriesService } from 'src/app/services/countries.service';
 
 @Component({
   selector: 'app-create-movie',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CreateMovieComponent implements OnInit {
 
-  constructor() { }
+  constructor(private countries: CountriesService) { }
 
   ngOnInit() {
   }

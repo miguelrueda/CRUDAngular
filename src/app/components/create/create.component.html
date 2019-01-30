@@ -7,6 +7,7 @@
       href="#pills-actors"
       role="tab"
       aria-controls="pills-actors"
+      (click)="setCurrentTab('actors')"
       aria-selected="true">Actors</a>
   </li>
   <li class="nav-item">
@@ -17,6 +18,7 @@
       href="#pills-movies"
       role="tab"
       aria-controls="pills-movies"
+      (click)="setCurrentTab('movies')"
       aria-selected="false">Movies</a>
   </li>
   <li class="nav-item">
@@ -27,20 +29,25 @@
       href="#pills-categories"
       role="tab"
       aria-controls="pills-categories"
+      (click)="setCurrentTab('categories')"
       aria-selected="false">Categories</a>
   </li>
 </ul>
 <div class="tab-content" id="pills-tabContent">
   <div
-    class="tab-pane fade show active"
+    class="tab-pane fade show"
+    [class.active]="isTabActive('actors')"
+    [ngClass]="{'active': actorsTab}"
     id="pills-actors"
     role="tabpanel"
     aria-labelledby="pills-actors-tab">
-    <app-create-actor></app-create-actor>
+    <app-create-actor [actorId]="actorId"></app-create-actor>
   </div>
   <div
     class="tab-pane fade"
     id="pills-movies"
+    [ngClass]="{'active': moviesTab}"
+    [class.active]="isTabActive('movies')"
     role="tabpanel"
     aria-labelledby="pills-movies-tab">
     <app-create-movie></app-create-movie>
@@ -48,8 +55,10 @@
   <div
     class="tab-pane fade"
     id="pills-categories"
+    [ngClass]="{'active': categoriesTab}"
+    [class.active]="isTabActive('categories')"
     role="tabpanel"
     aria-labelledby="pills-categories-tab">
-    <app-create-category></app-create-category>
+    <app-create-category [categoryId]="categoryId"></app-create-category>
   </div>
 </div>

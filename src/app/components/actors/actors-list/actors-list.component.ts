@@ -11,6 +11,7 @@ export class ActorsListComponent implements OnInit {
 
   @Input() mode: String;
   private actorsList: Object[];
+  currentId = -1;
 
   constructor(private actors: ActorsService,
     private router: Router, private activatedRoute: ActivatedRoute) { }
@@ -31,8 +32,11 @@ export class ActorsListComponent implements OnInit {
   }
 
   public delete(id: number): void {
-    console.log(`Eliminar ${id}`);
+    this.currentId = id;
   }
 
+  public performDelete() {
+    console.log(`Eliminar ${this.currentId}`);
+  }
 
 }
