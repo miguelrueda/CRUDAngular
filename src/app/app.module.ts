@@ -20,6 +20,10 @@ import { ActorsService } from './services/actors.service';
 import { MoviesService } from './services/movies.service';
 import { CategoriesService } from './services/categories.service';
 import { CountriesService } from './services/countries.service';
+import { ReadActorComponent } from './components/actors/read-actor/read-actor.component';
+import { ReadMovieComponent } from './components/movies/read-movie/read-movie.component';
+import { ReadCategoryComponent } from './components/categories/read-category/read-category.component';
+import { TabsContainerComponent } from './components/shared/tabs-container/tabs-container.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +40,11 @@ import { CountriesService } from './services/countries.service';
     CreateCategoryComponent,
     ActorsListComponent,
     MoviesListComponent,
-    CategoriesListComponent
+    CategoriesListComponent,
+    ReadActorComponent,
+    ReadMovieComponent,
+    ReadCategoryComponent,
+    TabsContainerComponent
   ],
   imports: [
     BrowserModule,
