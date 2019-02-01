@@ -1,3 +1,14 @@
-<p>
-  read-actor works!
-</p>
+<span [ngSwitch]="mode">
+  <p *ngSwitchCase="'read'">
+    READ
+  </p>
+  <p *ngSwitchCase="'update'">
+    UPDATE
+  </p>
+  <p *ngSwitchCase="'delete'">
+    DELETE
+  </p>
+  <p *ngSwitchDefault>
+    read-actor works!
+  </p>
+</span>
