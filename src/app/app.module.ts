@@ -24,6 +24,7 @@ import { ReadActorComponent } from './components/actors/read-actor/read-actor.co
 import { ReadMovieComponent } from './components/movies/read-movie/read-movie.component';
 import { ReadCategoryComponent } from './components/categories/read-category/read-category.component';
 import { TabsContainerComponent } from './components/shared/tabs-container/tabs-container.component';
+import { ActorDetailsComponent } from './components/actors/actor-details/actor-details.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import { TabsContainerComponent } from './components/shared/tabs-container/tabs-
     ReadActorComponent,
     ReadMovieComponent,
     ReadCategoryComponent,
-    TabsContainerComponent
+    TabsContainerComponent,
+    ActorDetailsComponent
   ],
   imports: [
     BrowserModule,

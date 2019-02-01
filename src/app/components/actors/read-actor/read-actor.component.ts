@@ -9,6 +9,7 @@ import { ActivatedRoute } from '@angular/router';
 export class ReadActorComponent implements OnInit {
 
   mode = 'read';
+  currentActor = -1;
 
   constructor(private activatedRoute: ActivatedRoute) { }
 
@@ -27,6 +28,10 @@ export class ReadActorComponent implements OnInit {
         this.mode = 'delete';
         break;
       }
+    });
+    this.activatedRoute.params.subscribe(params => {
+      console.log(params);
+      this.currentActor = +params['id'];
     });
     console.log(`mode is ${this.mode}`);
   }

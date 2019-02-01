@@ -1,0 +1,12 @@
+<div class="container mt-5">
+  <div class="jumbotron">
+    <h1 class="display-4">{{currentActor.name}}</h1>
+    <figure class="card-img">
+      <img class="card-img-top" src="{{currentActor.name}}" alt="{{currentActor.name}}">
+    </figure>
+    <p class="lead">Descripción</p>
+    <hr class="my-4">
+    <p>Edad: Edad</p>
+    <a [routerLink]="[ '/read/actors']" class="btn btn-secondary">Regresar</a>
+  </div>
+</div>

@@ -1,7 +1,7 @@
 <span [ngSwitch]="mode">
-  <p *ngSwitchCase="'read'">
-    READ
-  </p>
+  <div *ngSwitchCase="'read'">
+    <app-actor-details [actorId]="currentActor"></app-actor-details>
+  </div>
   <p *ngSwitchCase="'update'">
     UPDATE
   </p>
